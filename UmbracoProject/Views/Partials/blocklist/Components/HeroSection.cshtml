@@ -18,10 +18,22 @@
 			<h1 class=" text-[4.5rem] font-bold leading-none">@content.HeroTitle</h1>
 			<div class="rte">@Html.Raw(content.HeroText)</div>
 
-			@if (content.HeroLink != null)
+			@foreach (var link in content.HeroLink)
 			{
-				<a class="bg-primary text-white py-3 px-10 no-underlinde rounded cursor-pointer self-start font-" href="@content.HeroLink.Url">@content.HeroLink.Name</a>
+				var href = link.Url; // Extern länk
+
+				if (link.Udi != null)
+				{
+					href = link.Udi.ToString(); // eller använd Umbraco.Url(link.Udi) om du har helper
+				}
+
+				<a href="@href" class="bg-primary text-white py-3 px-10 rounded">
+					@link.Name
+				</a>
 			}
+
+
+
 		</div>
 	</div>
 </section>
