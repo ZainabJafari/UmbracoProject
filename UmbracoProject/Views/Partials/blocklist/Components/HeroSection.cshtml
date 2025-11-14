@@ -18,19 +18,32 @@
 			<h1 class=" text-[4.5rem] font-bold leading-none">@content.HeroTitle</h1>
 			<div class="rte">@Html.Raw(content.HeroText)</div>
 
-			@foreach (var link in content.HeroLink)
-			{
-				var href = link.Url; // Extern länk
+            @foreach (var link in content.HeroLink)
+            {
+                string href = "#"; // fallback
 
-				if (link.Udi != null)
-				{
-					href = link.Udi.ToString(); // eller använd Umbraco.Url(link.Udi) om du har helper
-				}
+                if (!string.IsNullOrEmpty(link.Url))
+                {
+                    // extern länk
+                    href = link.Url;
+                }
+                else if (link.Udi != null)
+                {
+                    // intern länk
+                    var contentItem = Umbraco.Content(link.Udi);
+                    if (contentItem != null)
+                    {
+                        href = contentItem.Url(); // IPublishedContent.Url()
+                    }
+                }
 
-				<a href="@href" class="bg-primary text-white py-3 px-10 rounded">
-					@link.Name
-				</a>
-			}
+                <a href="@href" class="bg-primary text-white py-3 px-10 rounded">
+                    @link.Name ?? "Link"  // eller Title om modellen heter det
+                </a>
+            }
+
+
+
 
 
 
