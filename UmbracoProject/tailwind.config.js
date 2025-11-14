@@ -2,11 +2,14 @@
 module.exports = {
     content: [
         "./Views/**/*.cshtml",
+        "./Views/**/*.html",
+        "./wwwroot/**/*.html",
         "./wwwroot/**/*.js",
-        "./wwwroot/**/*.html"
+        "./**/*.cshtml"
     ],
     theme: {
-        extend: {},
+        extend: {
+        }
     },
-    plugins: [],
-};
+    plugins: []
+}

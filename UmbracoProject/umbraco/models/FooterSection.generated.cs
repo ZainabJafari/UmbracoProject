@@ -30,7 +30,7 @@ namespace Umbraco.Cms.Web.Common.PublishedModels
 		/// <summary>Footer Label</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "16.2.0+4eae48e")]
 		[global::System.Diagnostics.CodeAnalysis.MaybeNull]
-		global::Umbraco.Cms.Core.Strings.IHtmlEncodedString FooterSectionLabel { get; }
+		string FooterSectionLabel { get; }
 
 		/// <summary>Footer Text</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "16.2.0+4eae48e")]
@@ -88,12 +88,12 @@ namespace Umbraco.Cms.Web.Common.PublishedModels
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "16.2.0+4eae48e")]
 		[global::System.Diagnostics.CodeAnalysis.MaybeNull]
 		[ImplementPropertyType("footerSectionLabel")]
-		public virtual global::Umbraco.Cms.Core.Strings.IHtmlEncodedString FooterSectionLabel => GetFooterSectionLabel(this, _publishedValueFallback);
+		public virtual string FooterSectionLabel => GetFooterSectionLabel(this, _publishedValueFallback);
 
 		/// <summary>Static getter for Footer Label</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "16.2.0+4eae48e")]
 		[return: global::System.Diagnostics.CodeAnalysis.MaybeNull]
-		public static global::Umbraco.Cms.Core.Strings.IHtmlEncodedString GetFooterSectionLabel(IFooterSection that, IPublishedValueFallback publishedValueFallback) => that.Value<global::Umbraco.Cms.Core.Strings.IHtmlEncodedString>(publishedValueFallback, "footerSectionLabel");
+		public static string GetFooterSectionLabel(IFooterSection that, IPublishedValueFallback publishedValueFallback) => that.Value<string>(publishedValueFallback, "footerSectionLabel");
 
 		///<summary>
 		/// Footer Text

@@ -181,7 +181,7 @@
           "label": "Primary",
           "data": {
             "tag": "span",
-            "class": "text-primary"
+            "class": "#ffffff"
           },
           "appearance": {
             "style": "background-color:#4F5955; color:#fff; padding:5px;"
@@ -191,7 +191,7 @@
           "label": "Secondary",
           "data": {
             "tag": "span",
-            "class": "text-secondary"
+            "class": "text-white"
           },
           "appearance": {
             "style": "background-color:#D9C3A9; color:#fff; padding:5px;"

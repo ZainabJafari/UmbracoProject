@@ -63,7 +63,7 @@ namespace Umbraco.Cms.Web.Common.PublishedModels
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "16.2.0+4eae48e")]
 		[global::System.Diagnostics.CodeAnalysis.MaybeNull]
 		[ImplementPropertyType("homeEmployeesLabel")]
-		public virtual global::Umbraco.Cms.Core.Strings.IHtmlEncodedString HomeEmployeesLabel => this.Value<global::Umbraco.Cms.Core.Strings.IHtmlEncodedString>(_publishedValueFallback, "homeEmployeesLabel");
+		public virtual string HomeEmployeesLabel => this.Value<string>(_publishedValueFallback, "homeEmployeesLabel");
 
 		///<summary>
 		/// Link
@@ -71,7 +71,7 @@ namespace Umbraco.Cms.Web.Common.PublishedModels
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "16.2.0+4eae48e")]
 		[global::System.Diagnostics.CodeAnalysis.MaybeNull]
 		[ImplementPropertyType("homeEmployeesLink")]
-		public virtual global::Umbraco.Cms.Core.Models.Link HomeEmployeesLink => this.Value<global::Umbraco.Cms.Core.Models.Link>(_publishedValueFallback, "homeEmployeesLink");
+		public virtual global::System.Collections.Generic.IEnumerable<global::Umbraco.Cms.Core.Models.Link> HomeEmployeesLink => this.Value<global::System.Collections.Generic.IEnumerable<global::Umbraco.Cms.Core.Models.Link>>(_publishedValueFallback, "homeEmployeesLink");
 
 		///<summary>
 		/// Text

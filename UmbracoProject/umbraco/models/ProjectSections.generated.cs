@@ -55,7 +55,7 @@ namespace Umbraco.Cms.Web.Common.PublishedModels
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "16.2.0+4eae48e")]
 		[global::System.Diagnostics.CodeAnalysis.MaybeNull]
 		[ImplementPropertyType("projectSectionOneDate")]
-		public virtual global::Umbraco.Cms.Core.Strings.IHtmlEncodedString ProjectSectionOneDate => this.Value<global::Umbraco.Cms.Core.Strings.IHtmlEncodedString>(_publishedValueFallback, "projectSectionOneDate");
+		public virtual string ProjectSectionOneDate => this.Value<string>(_publishedValueFallback, "projectSectionOneDate");
 
 		///<summary>
 		/// Project Section One Image
