@@ -1,0 +1,24 @@
+﻿@inherits Umbraco.Cms.Web.Common.Views.UmbracoViewPage<Umbraco.Cms.Core.Models.Blocks.BlockListItem>;
+@using ContentModels = Umbraco.Cms.Web.Common.PublishedModels;
+@{
+    var content = (ContentModels.HomeRecentProjects)Model.Content;
+}
+<section class="bg-white py-20">
+    <div class="max-w-7xl mx-auto px-6">
+        <!-- Sektionstitel -->
+        <div class="text-center mb-12">
+            <p class="text-sm font-semibold uppercase tracking-widest text-[#C4A47C]">
+                @content.HomeRecentProjectsLabel
+            </p>
+            <p class="text-4xl font-bold text-[#3B4A43] mt-2">
+                @content.HomeRecentProjectsTitle
+            </p>
+        </div>
+
+        <!-- Projektkort -->
+        <div class="">
+            <img src="@(content.HomeRecentProjectsImage?.Url() ?? "~/images/Img.svg")"/>
+
+        </div>
+    </div>
+</section>

@@ -1,0 +1,27 @@
+﻿@using Umbraco.Cms.Web.Common.PublishedModels;
+@inherits Umbraco.Cms.Web.Common.Views.UmbracoViewPage<ProjectDetail>
+@{
+	Layout = "mainLayout.cshtml";
+}
+
+<partial name="Partials/Layout/_PageHeader" model="(IPageHeader)Model" />
+
+<div class="w-full bg-gray-50 py-10">
+    <div class="max-w-3xl mx-auto bg-white shadow-sm rounded-lg p-8
+                prose prose-lg prose-neutral
+                prose-img:rounded-lg prose-img:w-full prose-img:my-6
+                prose-h2:mt-10 prose-h2:mb-4
+                prose-p:text-gray-700
+                prose-li:my-1
+                leading-relaxed">
+
+        @Html.Raw(Model.ProjectDetailBody)
+
+    </div>
+</div>
+
+
+
+
+
+<partial name="Partials/Layout/_FooterSection" />

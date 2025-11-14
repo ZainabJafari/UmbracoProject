@@ -1,0 +1,32 @@
+﻿ @inherits Umbraco.Cms.Web.Common.Views.UmbracoViewPage<IFooterSection>;
+
+
+<section class="bg-gray-50 py-16">
+    <div class="max-w-6xl mx-auto flex flex-col lg:flex-row items-center gap-12 px-6">
+
+        <!-- Vänster sida - Bild -->
+        <div class="relative flex-1 flex justify-center">
+            <div class="absolute inset-0 left-10 top-10 bg-gray-800 rounded-lg w-3/4 h-3/4 -z-10"></div>
+            <img src="@Model.FooterSectionImage?.Url()" alt="Contact person" class="rounded-lg shadow-lg w-full max-w-sm object-cover" />
+        </div>
+
+        <!-- Höger sida - Text -->
+        <div class="flex-1 space-y-6">
+            <h2 class="text-3xl font-bold text-gray-800 leading-snug">
+                @Model.FooterSectionLabel
+            </h2>
+
+            <div class="space-y-5 text-gray-700">
+
+
+                <div>
+     
+                    <p class="text-sm text-gray-600">@Model.FooterSectionText</p>
+                </div>
+
+          
+            </div>
+        </div>
+
+    </div>
+</section>

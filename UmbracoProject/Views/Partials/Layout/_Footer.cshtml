@@ -1,0 +1,14 @@
+﻿ @inherits Umbraco.Cms.Web.Common.Views.UmbracoViewPage
+
+
+@{
+    var rootContent = Umbraco.ContentAtRoot();
+    var siteSettings = rootContent.OfType<SiteSettings>().FirstOrDefault();
+    var logo = siteSettings?.SiteLoga;
+}
+
+<footer>
+    <div class="bg-[#4F5955] py-3">
+        <p class="text-center text-[#D9C3A9]">© Onatrix. All Rights Reserved. Credits to Themesflat</p>
+    </div>
+</footer>

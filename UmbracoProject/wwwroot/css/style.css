@@ -1,0 +1,26 @@
+﻿:root {
+    --clr-neutral: #ffffff;
+    --clr-white: #f2eddc;
+    --clr-white-100: #f7f7f7;
+    --clr-dark: #0e0e0e;
+    --clr-primary: #f5955;
+    --clr-main-light: #606966;
+    --clr-accent: #f2eddc;
+    --clr-secondary: #d9c3a9;
+    --clr-gray-400: #b5264;
+    --clr-body-text: #535656;
+    --clr-body-text-100: #999999;
+    --clr-notel: #9c9ea6;
+    --clr-border-gray: #eaeaea;
+    --clr-border-400: #c7c8c9;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+}
+
+.rte h3 {
+    font-size: 2.5rem;
+    color: var(--clr-primary);
+    font-weight: 700;
+}

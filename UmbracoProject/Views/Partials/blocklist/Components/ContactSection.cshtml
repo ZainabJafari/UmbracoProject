@@ -1,0 +1,12 @@
+﻿@inherits Umbraco.Cms.Web.Common.Views.UmbracoViewPage<Umbraco.Cms.Core.Models.Blocks.BlockListItem>;
+@using ContentModels = Umbraco.Cms.Web.Common.PublishedModels;
+@{
+    var content = (ContentModels.ContactInformationCard)Model.Content;
+}
+
+<div class="flex flex-col gap-4">
+
+    <h3 class="text-red text-[1.222]rem font-semibold">@content.ContactInformationCardTitle</h3>
+    <p class="text-body-text text-[0.875rem] font-normal">@content.ContactInformationLocation</p>
+
+</div>

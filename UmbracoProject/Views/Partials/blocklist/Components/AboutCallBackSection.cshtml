@@ -1,0 +1,61 @@
+﻿ @inherits Umbraco.Cms.Web.Common.Views.UmbracoViewPage<Umbraco.Cms.Core.Models.Blocks.BlockListItem>
+@using ContentModels = Umbraco.Cms.Web.Common.PublishedModels;
+@{
+    var content = (ContentModels.AboutCallbackSection)Model.Content;
+}
+
+<section class="py-28">
+    <div class="max-w-7xl mx-auto w-full flex gap-10">
+        <div class="flex flex-col w-7/12">
+            <div class="rte">
+                @Html.Raw(content.AboutCallbackSectionBody)
+            </div>
+        </div>
+
+        <div class="flex flex-col w-5/12 shadow-sm -mt-[11rem] z-[99]">
+            <div class="bg-primary">
+                <div class="text-accent py-[1.5rem] px-[2rem] text-[1.875rem] font-bold bg-[#4F5955] text-[#F2EDDC]">
+                    @content.AboutCallbackFormTitle
+                </div>
+            <p class="p-5">@content.AboutCallbackFormDescription</p>
+
+            </div>
+
+        <div>
+
+                <form id="contactForm" action="/submit" method="post" novalidate>
+                    <div class="flex flex-col">
+
+                        <div class="p-4">
+                                <input class="p-3 w-full border border-1-grey" id="name" name="name" type="text" required placeholder="Namn" />
+                        </div>
+
+                        <div class="p-4">
+                            <input class="p-3 w-full border border-1-grey" id="email" name="email" type="email" autocomplete="email" required placeholder="Email address" />
+                        </div>
+
+                        <div class="p-4">
+                            <input class="p-3 w-full border border-1-grey"  id="email" name="email" type="email" autocomplete="email" required placeholder="Phone" />
+                        </div>
+
+                        <div class="p-4">
+                            <input class="p-3 w-full border border-1-grey" id="email" name="email" type="email" autocomplete="email" required placeholder="Financial consulting" />
+                        </div>
+                    </div>
+
+                
+
+
+                    <div>
+                        <button class="p-3 w-full border-none bg-[#F2EDDC]" type="submit" id="submitBtn">Submit</button>
+                    </div>
+
+                    <div id="formResult" aria-live="polite" style="margin-top:10px;"></div>
+                </form>
+          
+        </div>
+        </div>
+
+    </div>
+</section>
+  
